@@ -1,4 +1,5 @@
-import os
+﻿import os
+import time
 import requests
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
@@ -34,6 +35,9 @@ def linkToFile(pid, link, title):
         print('New  : ' + file_full_path)
     except:
         print('File Write Error')
+
+    print('Sleep 5Min')
+    time.sleep(300)
     return
 
 
@@ -76,6 +80,8 @@ def url_call(pid):
 if __name__ == "__main__":
     print('---------------------------------------------------')
     #pid = 7418 #지대넓얍
-    pid = 12757 #송은이 비밀보장
+    #pid = 12757 #송은이 비밀보장
     #pid = 9126 #나는 프로그래머다
+    #pid = 487 #POG
+    pid = 3709 #빨간책방
     url_call(pid)
